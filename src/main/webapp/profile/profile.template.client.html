@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Profile</h1>
+    <form>
+        <div class="row mb-3">
+            <label for="usernameInput"
+                   class="col-sm-2 col-form-label">
+                Username
+            </label>
+            <div class="col-sm-10">
+                <input type="text"
+                       class="form-control"
+                       id="usernameInput"
+                       value="Pablo Forero"
+                       disabled>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="phoneInput"
+                   class="col-sm-2 col-form-label">
+                Phone
+            </label>
+            <div class="col-sm-10">
+                <input type="text"
+                       class="form-control"
+                       id="phoneInput"
+                       placeholder="(123) 123-4567">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="emailInput"
+                   class="col-sm-2 col-form-label">
+                Email
+            </label>
+            <div class="col-sm-10">
+                <input type="email"
+                       class="form-control"
+                       id="emailInput"
+                       value="pablo@cs5610.com">
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <label for="roleInput"
+                   class="col-sm-2 col-form-label">
+                Role
+            </label>
+
+            <div class="col-sm-10">
+                <select class="form-control"
+                        id="roleInput">
+                    <option selected disabled>Select one</option>
+                    <option value="1">Student</option>
+                    <option value="2">Faculty</option>
+                    <option value="3">Admin</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="dobInput"
+                   class="col-sm-2 col-form-label">
+                Date of Birth
+            </label>
+            <div class="col-sm-10">
+                <input type="date"
+                       class="form-control"
+                       id="dobInput"
+                       value="mm-dd-yyyy">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+                <button type="button"
+                        class="btn btn-success btn-block">
+                    Update
+                </button>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+                <button type="button"
+                        class="btn btn-danger btn-block">
+                    Logout
+                </button>
+            </div>
+        </div>
+
+
+    </form>
+</div>
+</body>
+</html>

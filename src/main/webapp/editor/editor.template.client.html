@@ -6,177 +6,174 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Course Editor</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <div class="col-4">
-                <a class="nav-item"
-                   href="#">
-                    <button
-                            type="button"
-                            class="btn btn-outline-secondary btn-sm">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </a>
-                <a class="navbar-brand float-right"
-                   href="#">
-                    CS5610 - WebDev
-                </a>
 
-            </div>
-            <div class="col-8">
-                <ul class="nav nav-tabs"
-                    id="editorTabs"
-                    role="tablist">
-                    <li class="nav-item"
-                        role="presentation">
-                        <a class="nav-link"
-                           id="build-tab"
-                           href="#"
-                           data-bs-toggle="tab"
-                           role="tab"
-                           aria-controls="build"
-                           aria-selected="true">
-                            Build
-                        </a>
-                    </li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="col-4 d-flex justify-content-around align-items-center">
+            <button type="button"
+                    class="btn-close"
+                    aria-label="Close">
+            </button>
+            <span class="navbar-brand">
+                CS5610 - WebDev
+            </span>
 
-                    <li class="nav-item"
-                        role="presentation">
-                        <a class="nav-link"
-                           id="pages-tab"
-                           href="#"
-                           data-bs-toggle="tab"
-                           role="tab"
-                           aria-controls="pages"
-                           aria-selected="false">
-                            Pages
-                        </a>
-                    </li>
-
-                    <li class="nav-item"
-                        role="presentation">
-                        <a class="nav-link"
-                           id="theme-tab"
-                           href="#"
-                           data-bs-toggle="tab"
-                           role="tab"
-                           aria-controls="theme"
-                           aria-selected="false">
-                            Theme
-                        </a>
-                    </li>
-
-                    <li class="nav-item"
-                        role="presentation">
-                        <a class="nav-link"
-                           id="store-tab"
-                           href="#"
-                           data-bs-toggle="tab"
-                           role="tab"
-                           aria-controls="store"
-                           aria-selected="false">
-                            Store
-                        </a>
-                    </li>
-
-                    <li class="nav-item"
-                        role="presentation">
-                        <a class="nav-link"
-                           id="apps-tab"
-                           href="#"
-                           data-bs-toggle="tab"
-                           role="tab"
-                           aria-controls="apps"
-                           aria-selected="false">
-                            Apps
-                        </a>
-                    </li>
-
-                    <li class="nav-item"
-                        role="presentation">
-                        <a class="nav-link"
-                           id="settings-tab"
-                           href="#"
-                           data-bs-toggle="tab"
-                           role="tab"
-                           aria-controls="settings"
-                           aria-selected="false">
-                            Settings
-                        </a>
-                    </li>
-
-                    <li class="nav-item"
-                        role="presentation">
-                        <a class="nav-link"
-                           id="add-tab"
-                           href="#"
-                           data-bs-toggle="tab"
-                           role="tab"
-                           aria-controls="add"
-                           aria-selected="false">
-                            +
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
-    </nav>
+        <div class="col-8">
+            <ul class="nav nav-tabs"
+                id="editorTabs"
+                role="tablist">
+                <li class="nav-item"
+                    role="presentation">
+                    <a class="nav-link"
+                       id="build-tab"
+                       href="#"
+                       data-bs-toggle="tab"
+                       role="tab"
+                       aria-controls="build"
+                       aria-selected="true">
+                        Build
+                    </a>
+                </li>
+
+                <li class="nav-item"
+                    role="presentation">
+                    <a class="nav-link"
+                       id="pages-tab"
+                       href="#"
+                       data-bs-toggle="tab"
+                       role="tab"
+                       aria-controls="pages"
+                       aria-selected="false">
+                        Pages
+                    </a>
+                </li>
+
+                <li class="nav-item"
+                    role="presentation">
+                    <a class="nav-link"
+                       id="theme-tab"
+                       href="#"
+                       data-bs-toggle="tab"
+                       role="tab"
+                       aria-controls="theme"
+                       aria-selected="false">
+                        Theme
+                    </a>
+                </li>
+
+                <li class="nav-item"
+                    role="presentation">
+                    <a class="nav-link"
+                       id="store-tab"
+                       href="#"
+                       data-bs-toggle="tab"
+                       role="tab"
+                       aria-controls="store"
+                       aria-selected="false">
+                        Store
+                    </a>
+                </li>
+
+                <li class="nav-item"
+                    role="presentation">
+                    <a class="nav-link"
+                       id="apps-tab"
+                       href="#"
+                       data-bs-toggle="tab"
+                       role="tab"
+                       aria-controls="apps"
+                       aria-selected="false">
+                        Apps
+                    </a>
+                </li>
+
+                <li class="nav-item"
+                    role="presentation">
+                    <a class="nav-link"
+                       id="settings-tab"
+                       href="#"
+                       data-bs-toggle="tab"
+                       role="tab"
+                       aria-controls="settings"
+                       aria-selected="false">
+                        Settings
+                    </a>
+                </li>
+
+                <li class="nav-item"
+                    role="presentation">
+                    <a class="nav-link"
+                       id="add-tab"
+                       href="#"
+                       data-bs-toggle="tab"
+                       role="tab"
+                       aria-controls="add"
+                       aria-selected="false">
+                        +
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
     <div class="row">
         <div class="col-4">
             <ul class="list-group">
                 <li class="list-group-item">
                     Module 1 - JQuery
                     <a href="#">
-                        <i class="far fa-trash-alt float-right"></i>
+                        <i class="far fa-trash-alt float-end"></i>
                     </a>
                 </li>
                 <li class="list-group-item active">
                     Module 2 - React
                     <a href="">
-                        <i class="far fa-trash-alt float-right"></i>
+                        <i class="far fa-trash-alt float-end"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
                     Module 3 - Redux
                     <a href="">
-                        <i class="far fa-trash-alt float-right"></i>
+                        <i class="far fa-trash-alt float-end"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
                     Module 4 - Native
                     <a href="#">
-                        <i class="far fa-trash-alt float-right"></i>
+                        <i class="far fa-trash-alt float-end"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
                     Module 5 - Angular
                     <a href="#">
-                        <i class="far fa-trash-alt float-right"></i>
+                        <i class="far fa-trash-alt float-end"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
                     Module 6 - Node
                     <a href="#">
-                        <i class="far fa-trash-alt float-right"></i>
+                        <i class="far fa-trash-alt float-end"></i>
                     </a>
                 </li>
                 <li class="list-group-item">
                     Module 7 - Mongo
                     <a href="#">
-                        <i class="far fa-trash-alt float-right"></i>
+                        <i class="far fa-trash-alt float-end"></i>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="col-8">
-
             <ul class="nav nav-pills">
                 <li class="nav-item">
                     <a href="" class="nav-link">Topic 1</a>
@@ -194,27 +191,27 @@
                     <a href="" class="nav-link">+</a>
                 </li>
             </ul>
-            <div class="row float-right">
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+            <div class="row">
+                <div class="d-grid gap-2 d-sm-flex justify-content-md-end align-items-center">
+                    <button type="button"
+                            class="btn btn-success">
+                        Save
+                    </button>
+                    <div class="form-check form-switch">
+                        <label class="form-check-label" for="previewSwitch">Preview</label>
+                        <input class="form-check-input" type="checkbox" id="previewSwitch">
+                    </div>
                 </div>
-                <!--
-                <div class="custom-control custom-switch">
-                    <label class="custom-control-label"
-                           for="previewSwitch">
-                        Preview
-                    </label>
-                    <input type="checkbox"
-                           class="custom-control-input"
-                           id="previewSwitch">
-                </div>
-                -->
+
+
             </div>
             <div class="row">
                 Content
             </div>
         </div>
+    </div>
+    <div>
+        <a href="../index.html">Back to landing</a>
     </div>
 </div>
 </body>

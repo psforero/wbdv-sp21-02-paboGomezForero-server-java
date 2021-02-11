@@ -99,32 +99,33 @@ function deleteUser(event) {
  */
 function selectUser(event) {
 
-    var prevUserId;
-    if (selectedUser != null) {
-        prevUserId = selectedUser._id;
+    var prevUser = selectedUser;
+    var prevIndex;
+    if (prevUser != null) {
+        prevIndex = usersDB.findIndex(user => user._id === prevUser._id);
     }
 
     $selectBtn = jQuery(event.target);
     var userIndex = $selectBtn.attr("id");
     selectedUser = usersDB[userIndex];
 
-    var rowColor;
-    if (prevUserId === selectedUser._id) {
-        selectedUser = null;
+    if (prevUser != null) {
+        if (prevUser._id === selectedUser._id) {
+            selectedUser = null;
+        }
         clearInputFields();
-        rowColor = "#f8f9fa";
-    } else {
-        // update input fields with selected user values
-        $usernameFld.val(selectedUser.username);
-        $passwordFld.val(selectedUser.password);
-        $firstNameFld.val(selectedUser.firstName);
-        $lastNameFld.val(selectedUser.lastName);
-        $roleFld.val(selectedUser.role);
-        rowColor = "lightblue";
+        jQuery(`tr#row-${prevIndex}`).css("background-color", "#f8f9fa");
     }
 
-    // Change row background to show selection
-    jQuery(`tr#row-${userIndex}`).css("background-color", rowColor);
+    // update input fields with selected user values
+    $usernameFld.val(selectedUser.username);
+    $passwordFld.val(selectedUser.password);
+    $firstNameFld.val(selectedUser.firstName);
+    $lastNameFld.val(selectedUser.lastName);
+    $roleFld.val(selectedUser.role);
+
+    jQuery(`tr#row-${userIndex}`).css("background-color", "lightblue");
+
 }
 
 /**
@@ -169,9 +170,13 @@ function renderUsers(users) {
             <td class="wbdv-last-name">${user.lastName}</td>
             <td class="wbdv-role">${user.role}</td>
             <td class="wbdv-actions">
-                <span>
-                    <i class="fa-2x fa fa-times wbdv-remove" id="${i}"></i>
-                    <i class="fa-2x fa fa-pencil wbdv-select" id="${i}"></i>
+                <span class="d-flex justify-content-evenly">
+                    <button class="btn btn-danger">
+                        <i class="fa-lg fas fa-trash-alt wbdv-remove" id="${i}"></i>
+                    </button>
+                    <button class="btn btn-info">
+                        <i class="fa-lg fas fa-user-cog wbdv-select" id="${i}"></i>
+                    </button>
                 </span>
             </td>
         </tr>`

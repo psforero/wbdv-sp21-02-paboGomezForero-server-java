@@ -4,18 +4,19 @@ import com.example.wbdvsp2102pabloGomezForeroserverjava.models.Widget;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
 public class WidgetService {
     private List<Widget> widgets = new ArrayList<Widget>();
     {
-        Widget w1 = new Widget(123l, "ABC123", "HEADING", 1, "Welcome to widget list 1 - ABC123");
-        Widget w2 = new Widget(234l, "ABC123", "PARAGRAPH", 1, "I am the first paragraph");
-        Widget w3 = new Widget(345l, "ABC123", "PARAGRAPH", 1, "And I am the second one");
-        Widget w4 = new Widget(456l, "ABC234", "HEADING", 2, "Welcome to widget list 2 - ABC234");
-        Widget w5 = new Widget(567l, "ABC234", "PARAGRAPH", 1, "I am paragraph A");
-        Widget w6 = new Widget(678l, "ABC234", "PARAGRAPH", 1, "And I am paragraph B");
+        Widget w1 = new Widget(123l, "60480131104b9800172010fa", "HEADING", 1, "Welcome to widget list a");
+        Widget w2 = new Widget(234l, "60480131104b9800172010fa", "PARAGRAPH", 1, "I am the a1 paragraph");
+        Widget w3 = new Widget(345l, "60480131104b9800172010fa", "PARAGRAPH", 1, "And I am the a2 one");
+        Widget w4 = new Widget(456l, "60480136104b9800172010fc", "HEADING", 2, "Welcome to widget list b");
+        Widget w5 = new Widget(567l, "60480136104b9800172010fc", "PARAGRAPH", 1, "I am paragraph b1");
+        Widget w6 = new Widget(678l, "60480136104b9800172010fc", "PARAGRAPH", 1, "And I am paragraph b2");
 
         widgets.add(w1);
         widgets.add(w2);
@@ -37,5 +38,12 @@ public class WidgetService {
             }
         }
         return ws;
+    }
+
+    public Widget createWidgetForTopic(String topicId, Widget widget) {
+        widget.setTopicId(topicId);
+        widget.setId((new Date()).getTime());
+        widgets.add(widget);
+        return widget;
     }
 }

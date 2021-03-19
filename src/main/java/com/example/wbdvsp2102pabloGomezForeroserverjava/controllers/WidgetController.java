@@ -4,6 +4,7 @@ import com.example.wbdvsp2102pabloGomezForeroserverjava.models.Widget;
 import com.example.wbdvsp2102pabloGomezForeroserverjava.services.WidgetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,5 +34,10 @@ public class WidgetController {
             @PathVariable("tid") String topicId,
             @RequestBody Widget widget) {
         return service.createWidgetForTopic(topicId, widget);
+    }
+
+    @DeleteMapping("/api/widgets/{wid}")
+    public Integer deleteWidget(@PathVariable("wid") Long widgetId) {
+        return service.deleteWidget(widgetId);
     }
 }

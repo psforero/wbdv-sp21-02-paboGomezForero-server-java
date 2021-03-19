@@ -24,10 +24,10 @@ public class WidgetController {
     }
 
     @PostMapping("/api/topics/{tid}/widgets")
-    public Widget createWidgetForTopic(
+    public Widget createWidget(
             @PathVariable("tid") String topicId,
             @RequestBody Widget widget) {
-        return service.createWidgetForTopic(topicId, widget);
+        return service.createWidget(topicId, widget);
     }
 
     @DeleteMapping("/api/widgets/{wid}")

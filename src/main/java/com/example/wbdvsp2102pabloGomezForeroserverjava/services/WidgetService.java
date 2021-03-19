@@ -40,7 +40,7 @@ public class WidgetService {
         return ws;
     }
 
-    public Widget createWidgetForTopic(String topicId, Widget widget) {
+    public Widget createWidget(String topicId, Widget widget) {
         widget.setTopicId(topicId);
         widget.setId((new Date()).getTime());
         widgets.add(widget);
